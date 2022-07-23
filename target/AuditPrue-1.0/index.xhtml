@@ -4,89 +4,31 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Probando </title>
+        <title>insertando </title>
     </h:head>
     <h:body>
-        <div class="row" >
-            <div class="col-md-10">
-                <f:view>
+        <div class="row">
+            <div class="col col-md-6">
 
+                <h:form>
+                    <h1><h:outputText value="Create/Edit"/></h1>
+                    
 
-                    <h:form>
-                        <h1><h:outputText value="List"/></h1>
-                        <h:dataTable value="#{companyManageBeans.listaCompany}" var="item">
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Id"/>
-                                </f:facet>
-                                <h:outputText value="#{item.id}"/>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Name"/>
-                                </f:facet>
-                                <h:outputText value="#{item.name}"/>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Ruc"/>
-                                </f:facet>
-                                <h:outputText value="#{item.ruc}"/>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="DateCreate"/>
-                                </f:facet>
-                                <h:outputText value="#{item.dateCreate}">
-                                    <f:convertDateTime pattern="MM/dd/yyyy" />
-                                </h:outputText>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="UserModified"/>
-                                </f:facet>
-                                <h:outputText value="#{item.userModified}"/>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="DateModified"/>
-                                </f:facet>
-                                <h:outputText value="#{item.dateModified}">
-                                    <f:convertDateTime pattern="MM/dd/yyyy" />
-                                </h:outputText>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Phone"/>
-                                </f:facet>
-                                <h:outputText value="#{item.phone}"/>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Address"/>
-                                </f:facet>
-                                <h:outputText value="#{item.address}"/>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="CodeCompany"/>
-                                </f:facet>
-                                <h:outputText value="#{item.codeCompany}"/>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">
-                                    <h:outputText value="Status"/>
-                                </f:facet>
-                                <h:outputText value="#{item.status}"/>
-                            </h:column>
-                        </h:dataTable>
-                    </h:form>
-                </f:view>
+                        <h:outputLabel value="Name:" for="name" />
+                        <h:inputText id="name" class="form-control" value="#{companyManageBeans.company.name}" title="Name" required="true" requiredMessage="The Name field is required."/>
+                        <h:outputLabel value="Ruc:" for="ruc" />
+                        <h:inputText id="ruc" class="form-control" value="#{companyManageBeans.company.ruc}" title="Ruc" required="true" requiredMessage="The Ruc field is required."/>
+                        <h:outputLabel value="Phone:" for="phone" />
+                        <h:inputText id="phone" class="form-control" value="#{companyManageBeans.company.phone}" title="Phone" required="true" requiredMessage="The Phone field is required."/>
+                        <h:outputLabel value="Address:" for="address" />
+                        <h:inputText id="address" class="form-control" value="#{companyManageBeans.company.address}" title="Address" required="true" requiredMessage="The Address field is required."/>
+    <h:commandButton value="Insertar" action="#{companyManageBeans.guardarCompany()}"/>
+                  
+                </h:form> 
+            </div>
 
-
-            </div> 
         </div>
+
 
     </h:body>
 </html>
-

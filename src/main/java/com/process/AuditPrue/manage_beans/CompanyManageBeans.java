@@ -20,13 +20,29 @@ public class CompanyManageBeans {
     @EJB
     private CompanyModel companyModel;
     
-    List<Company> listaCompany;   
+    List<Company> listaCompany;
+    
+    private Company company = new Company();
 
     public List<Company> getListaCompany() {
         listaCompany = companyModel.listarCompany();
         return listaCompany;
     }
 
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+    
+    public boolean  guardarCompany() throws Exception{
+         boolean estado = false;
+    companyModel.insertarCompany(company);
+    return estado;
+    }
+    
     public CompanyManageBeans() {
     }
     
