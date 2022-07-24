@@ -1,12 +1,13 @@
-com\process\AuditPrue\resources\JavaEE8Resource.class
+com\process\auditexception\AuditException.class
+com\process\auditexception\AuditEJBException.class
 com\process\AuditPrue\manage_beans\CompanyManageBeans.class
 com\process\entity\BranchOffice.class
 com\process\entity\Rol.class
+com\process\ErrorMenssage\Message.class
 com\process\entity\UserRolPK.class
 com\process\entity\Area.class
 com\process\entity\DetailArea.class
 com\process\entity\User.class
-com\process\AuditPrue\JAXRSConfiguration.class
 com\process\entity\UserRol.class
 com\process\entity\Auditor.class
 com\process\AuditPrue\model\CompanyModel.class

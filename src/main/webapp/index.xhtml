@@ -6,25 +6,45 @@
     <h:head>
         <title>insertando </title>
     </h:head>
+    <script language="javascript">
+
+        function validarEmail(address) {
+            expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!expr.test(address))
+                alert("Error: La dirección de correo " + address + " es incorrecta.");
+        }
+    </script>
+
     <h:body>
         <div class="row">
             <div class="col col-md-6">
 
                 <h:form>
                     <h1><h:outputText value="Create/Edit"/></h1>
-                    
 
-                        <h:outputLabel value="Name:" for="name" />
-                        <h:inputText id="name" class="form-control" value="#{companyManageBeans.company.name}" title="Name" required="true" requiredMessage="The Name field is required."/>
-                        <h:outputLabel value="Ruc:" for="ruc" />
-                        <h:inputText id="ruc" class="form-control" value="#{companyManageBeans.company.ruc}" title="Ruc" required="true" requiredMessage="The Ruc field is required."/>
-                        <h:outputLabel value="Phone:" for="phone" />
-                        <h:inputText id="phone" class="form-control" value="#{companyManageBeans.company.phone}" title="Phone" required="true" requiredMessage="The Phone field is required."/>
-                        <h:outputLabel value="Address:" for="address" />
-                        <h:inputText id="address" class="form-control" value="#{companyManageBeans.company.address}" title="Address" required="true" requiredMessage="The Address field is required."/>
-    <h:commandButton value="Insertar" action="#{companyManageBeans.guardarCompany()}"/>
-                  
+
+                    <h:outputLabel value="Name:" for="name" />
+                    <h:inputText id="name" class="form-control" value="#{companyManageBeans.company.name}" title="Name" required="true" requiredMessage="The Name field is required."/>
+                    <h:outputLabel value="Ruc:" for="ruc" />
+                    <h:inputText id="ruc" class="form-control" value="#{companyManageBeans.company.ruc}" title="Ruc" required="true" requiredMessage="The Ruc field is required."/>
+                    <h:outputLabel value="Phone:" for="phone" />
+                    <h:inputText id="phone" class="form-control" value="#{companyManageBeans.company.phone}" title="Phone" required="true" requiredMessage="The Phone field is required."/>
+                    <h:outputLabel value="Address:" for="address" />
+                    <h:inputText id="address" class="form-control" value="#{companyManageBeans.company.address}" title="Address" required="true" requiredMessage="The Address field is required.">
+                        <f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+                    </h:inputText>
+
+                    <h:commandButton value="Insertar" action="#{companyManageBeans.guardarCompany()}"/>
+
                 </h:form> 
+
+                <!--                <h:commandLink class="btn btn-btn-info" action="aca va el numeral{companyManageBeans.obtenerRuc()}">
+                                    <i class="glyphicon glyphicon-edit"></i>
+                                    <f:param name="ruc" value=" <!--aca va el numeral{item.ruc}"/>  
+                                
+                                
+                                </h:commandLink>-->
+
             </div>
 
         </div>

@@ -1,4 +1,3 @@
-C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\AuditPrue\resources\JavaEE8Resource.java
 C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\entity\Area.java
 C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\entity\UserRolPK.java
 C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\entity\Auditor.java
@@ -7,7 +6,9 @@ C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\en
 C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\entity\Rol.java
 C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\AuditPrue\model\CompanyModel.java
 C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\AuditPrue\manage_beans\CompanyManageBeans.java
+C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\auditexception\AuditException.java
 C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\entity\DetailArea.java
 C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\entity\Company.java
 C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\entity\UserRol.java
-C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\AuditPrue\JAXRSConfiguration.java
+C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\auditexception\AuditEJBException.java
+C:\Users\crixx\Documents\NetBeansProjects\AuditPrue\src\main\java\com\process\ErrorMenssage\Message.java
